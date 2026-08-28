@@ -1,8 +1,8 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Designer Portfolio | UI/UX Designer in Dhaka, Bangladesh</title>
@@ -22,10 +22,11 @@
   <meta property="og:title" content="Designer Portfolio | UI/UX Designer">
   <meta
     property="og:description"
-    content="Clean, thoughtful and conversion-focused UI/UX design for websites, mobile apps and digital products."
+    content="Clean, thoughtful and user-focused UI/UX design for websites, mobile apps and digital products."
   >
   <meta property="og:type" content="website">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -84,6 +85,7 @@
       color: #0b0c0d;
     }
 
+
     /* =========================================================
        VARIABLES
     ========================================================= */
@@ -92,15 +94,22 @@
       --bg: #0b0c0d;
       --bg-soft: #111315;
       --bg-card: #151719;
+
       --text: #f3f4ef;
       --muted: #9a9d9c;
+
       --border: rgba(255,255,255,0.09);
+
       --accent: #d8ff3e;
       --accent-dark: #a9c923;
+
       --container: 1180px;
+
       --radius: 24px;
+
       --transition: 0.3s ease;
     }
+
 
     /* =========================================================
        GLOBAL
@@ -120,34 +129,48 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+
       color: var(--accent);
+
       font-size: 13px;
       font-weight: 700;
+
       letter-spacing: 0.13em;
       text-transform: uppercase;
+
       margin-bottom: 20px;
     }
 
     .eyebrow::before {
       content: "";
+
       width: 26px;
       height: 1px;
+
       background: var(--accent);
     }
 
     .section-title {
       max-width: 760px;
+
       font-family: "Space Grotesk", sans-serif;
+
       font-size: clamp(40px, 6vw, 76px);
+
       line-height: 0.98;
+
       letter-spacing: -0.055em;
+
       font-weight: 600;
     }
 
     .section-description {
       max-width: 620px;
+
       margin-top: 25px;
+
       color: var(--muted);
+
       font-size: 17px;
     }
 
@@ -155,34 +178,56 @@
       color: var(--accent);
     }
 
+
     /* =========================================================
-       BACKGROUND GRID
+       BACKGROUND
     ========================================================= */
 
     .page-grid {
       position: fixed;
+
       inset: 0;
+
       pointer-events: none;
+
       opacity: 0.22;
+
       z-index: -2;
+
       background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+        linear-gradient(
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        );
+
       background-size: 80px 80px;
     }
 
     .page-glow {
       position: fixed;
+
       width: 500px;
       height: 500px;
+
       border-radius: 50%;
+
       background: rgba(216,255,62,.04);
+
       filter: blur(100px);
+
       right: -180px;
       top: 120px;
+
       pointer-events: none;
+
       z-index: -1;
     }
+
 
     /* =========================================================
        HEADER
@@ -190,58 +235,85 @@
 
     header {
       position: fixed;
+
       top: 0;
       left: 0;
+
       width: 100%;
+
       z-index: 1000;
+
       transition: var(--transition);
     }
 
     header.scrolled {
       background: rgba(11,12,13,.88);
+
       backdrop-filter: blur(18px);
+
       border-bottom: 1px solid var(--border);
     }
 
     .nav {
       height: 82px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
     }
 
     .logo {
       display: flex;
+
       align-items: center;
+
       gap: 11px;
+
       font-family: "Space Grotesk", sans-serif;
+
       font-weight: 700;
+
       font-size: 20px;
     }
 
     .logo-mark {
       width: 34px;
       height: 34px;
+
       display: grid;
+
       place-items: center;
+
       background: var(--accent);
+
       color: #0b0c0d;
+
       border-radius: 10px;
+
       font-weight: 800;
+
       font-size: 15px;
     }
 
     .nav-links {
       display: flex;
+
       align-items: center;
+
       gap: 34px;
+
       list-style: none;
     }
 
     .nav-links a {
       color: #bfc2c0;
+
       font-size: 14px;
+
       font-weight: 500;
+
       transition: var(--transition);
     }
 
@@ -252,32 +324,49 @@
 
     .nav-cta {
       display: inline-flex;
+
       align-items: center;
+
       gap: 8px;
+
       background: var(--accent);
+
       color: #0b0c0d;
+
       padding: 12px 18px;
+
       border-radius: 100px;
+
       font-size: 14px;
+
       font-weight: 700;
+
       transition: var(--transition);
     }
 
     .nav-cta:hover {
       transform: translateY(-2px);
+
       background: #e6ff79;
     }
 
     .menu-btn {
       display: none;
+
       width: 44px;
       height: 44px;
+
       background: var(--bg-card);
+
       color: white;
+
       border: 1px solid var(--border);
+
       border-radius: 12px;
+
       font-size: 22px;
     }
+
 
     /* =========================================================
        HERO
@@ -285,25 +374,37 @@
 
     .hero {
       min-height: 100vh;
+
       display: flex;
+
       align-items: center;
+
       padding-top: 150px;
+
       overflow: hidden;
     }
 
     .hero-layout {
       display: grid;
+
       grid-template-columns: 1.15fr .85fr;
+
       gap: 70px;
+
       align-items: center;
     }
 
     .hero h1 {
       max-width: 850px;
+
       font-family: "Space Grotesk", sans-serif;
+
       font-size: clamp(56px, 8vw, 105px);
+
       line-height: .9;
+
       letter-spacing: -0.07em;
+
       font-weight: 600;
     }
 
@@ -313,178 +414,253 @@
 
     .hero-copy {
       max-width: 650px;
+
       margin-top: 30px;
+
       color: var(--muted);
+
       font-size: 18px;
+
       line-height: 1.7;
     }
 
     .hero-actions {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 13px;
+
       margin-top: 35px;
     }
 
     .btn {
       display: inline-flex;
+
       justify-content: center;
+
       align-items: center;
+
       gap: 10px;
+
       min-height: 52px;
+
       padding: 0 23px;
+
       border-radius: 100px;
+
       font-size: 14px;
+
       font-weight: 700;
+
       transition: var(--transition);
     }
 
     .btn-primary {
       background: var(--accent);
+
       color: #0b0c0d;
     }
 
     .btn-primary:hover {
       background: #e6ff79;
+
       transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(216,255,62,.12);
+
+      box-shadow:
+        0 12px 35px rgba(216,255,62,.12);
     }
 
     .btn-secondary {
       border: 1px solid var(--border);
+
       color: #f3f4ef;
+
       background: rgba(255,255,255,.02);
     }
 
     .btn-secondary:hover {
       border-color: rgba(216,255,62,.4);
+
       color: var(--accent);
+
       transform: translateY(-3px);
     }
 
-    /* Hero visual */
+
+    /* =========================================================
+       HERO PERSONAL IMAGE
+    ========================================================= */
 
     .hero-visual {
       position: relative;
-      min-height: 500px;
+
+      min-height: 540px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
     }
 
-    .profile-card {
+    .profile-image {
       position: relative;
-      width: min(390px, 90%);
-      height: 470px;
-      border: 1px solid var(--border);
-      background:
-        radial-gradient(circle at 30% 20%, rgba(216,255,62,.18), transparent 32%),
-        linear-gradient(145deg, #191c1d, #0e1011);
+
+      width: min(410px, 88%);
+
+      height: 500px;
+
       border-radius: 32px;
+
       overflow: hidden;
-      transform: rotate(4deg);
-      box-shadow: 30px 35px 80px rgba(0,0,0,.35);
+
+      background:
+        radial-gradient(
+          circle at 30% 20%,
+          rgba(216,255,62,.18),
+          transparent 35%
+        ),
+        linear-gradient(
+          145deg,
+          #191c1d,
+          #0e1011
+        );
+
+      border: 1px solid var(--border);
+
+      transform: rotate(3deg);
+
+      box-shadow:
+        30px 35px 80px rgba(0,0,0,.4);
+
+      z-index: 2;
     }
 
-    .profile-card::before {
+    .profile-image img {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center top;
+
+      display: block;
+
+      z-index: 2;
+
+      transition: transform .5s ease;
+    }
+
+    .profile-image:hover img {
+      transform: scale(1.03);
+    }
+
+    .profile-image::before {
       content: "";
+
       position: absolute;
+
       width: 250px;
       height: 250px;
+
       border-radius: 50%;
+
       background: var(--accent);
-      filter: blur(60px);
-      opacity: .08;
-      top: 80px;
-      left: 60px;
+
+      filter: blur(90px);
+
+      opacity: .12;
+
+      top: 50px;
+      left: 50px;
+
+      z-index: 1;
     }
 
-    .profile-shape {
-      position: absolute;
-      width: 220px;
-      height: 300px;
-      background: linear-gradient(145deg,#272c2e,#111314);
-      border-radius: 110px 110px 30px 30px;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 1px solid rgba(255,255,255,.08);
-    }
 
-    .profile-head {
-      position: absolute;
-      width: 125px;
-      height: 125px;
-      border-radius: 50%;
-      background: linear-gradient(145deg,#454c4d,#1c2021);
-      top: 55px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-
-    .profile-line {
-      position: absolute;
-      width: 145px;
-      height: 8px;
-      border-radius: 20px;
-      background: var(--accent);
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 68px;
-      opacity: .85;
-    }
+    /* =========================================================
+       FLOATING CARDS
+    ========================================================= */
 
     .floating-card {
       position: absolute;
+
       padding: 16px 19px;
-      background: rgba(18,20,21,.88);
+
+      background: rgba(18,20,21,.9);
+
       backdrop-filter: blur(15px);
+
       border: 1px solid var(--border);
+
       border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0,0,0,.3);
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,.3);
+
+      z-index: 10;
     }
 
     .floating-card small {
       display: block;
+
       color: var(--muted);
+
       font-size: 11px;
+
       margin-bottom: 4px;
     }
 
     .floating-card strong {
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 17px;
     }
 
     .float-one {
       top: 55px;
-      left: 0;
+
+      left: -35px;
     }
 
     .float-two {
-      right: 0;
+      right: -25px;
+
       bottom: 65px;
     }
 
     .scroll-note {
       position: absolute;
+
       bottom: 35px;
       left: 0;
+
       display: flex;
+
       align-items: center;
+
       gap: 12px;
+
       color: #777b7a;
+
       font-size: 12px;
+
       letter-spacing: .08em;
+
       text-transform: uppercase;
     }
 
     .scroll-line {
       width: 50px;
+
       height: 1px;
+
       background: #4c4f4f;
     }
+
 
     /* =========================================================
        SERVICES
@@ -496,55 +672,80 @@
 
     .services-grid {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 14px;
+
       margin-top: 65px;
     }
 
     .service-card {
       position: relative;
+
       min-height: 260px;
+
       padding: 30px;
+
       background: var(--bg-card);
+
       border: 1px solid var(--border);
+
       border-radius: var(--radius);
+
       overflow: hidden;
+
       transition: var(--transition);
     }
 
     .service-card:hover {
       transform: translateY(-7px);
-      border-color: rgba(216,255,62,.28);
+
+      border-color:
+        rgba(216,255,62,.28);
     }
 
     .service-number {
       color: #575b5a;
+
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 13px;
     }
 
     .service-icon {
       width: 50px;
       height: 50px;
+
       display: grid;
+
       place-items: center;
+
       margin: 35px 0 30px;
+
       border: 1px solid var(--border);
+
       border-radius: 15px;
+
       color: var(--accent);
+
       font-size: 21px;
     }
 
     .service-card h3 {
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 22px;
+
       margin-bottom: 10px;
     }
 
     .service-card p {
       color: var(--muted);
+
       font-size: 14px;
     }
+
 
     /* =========================================================
        ABOUT
@@ -552,35 +753,49 @@
 
     .about {
       background: #0e1011;
+
       border-top: 1px solid var(--border);
+
       border-bottom: 1px solid var(--border);
     }
 
     .about-layout {
       display: grid;
+
       grid-template-columns: .8fr 1.2fr;
+
       gap: 100px;
+
       align-items: center;
     }
 
     .about-label {
       font-size: 14px;
+
       color: var(--muted);
+
       text-transform: uppercase;
+
       letter-spacing: .1em;
     }
 
     .about h2 {
       font-family: "Space Grotesk", sans-serif;
+
       font-size: clamp(40px, 5vw, 67px);
+
       line-height: 1;
+
       letter-spacing: -.05em;
+
       margin-bottom: 28px;
     }
 
     .about-text {
       color: var(--muted);
+
       font-size: 17px;
+
       max-width: 700px;
     }
 
@@ -590,29 +805,40 @@
 
     .stats {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 12px;
+
       margin-top: 45px;
     }
 
     .stat {
       padding: 22px;
+
       border: 1px solid var(--border);
+
       background: var(--bg-card);
+
       border-radius: 18px;
     }
 
     .stat strong {
       display: block;
+
       color: var(--accent);
+
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 31px;
     }
 
     .stat span {
       color: var(--muted);
+
       font-size: 12px;
     }
+
 
     /* =========================================================
        PROJECTS
@@ -620,54 +846,78 @@
 
     .projects-head {
       display: flex;
+
       align-items: flex-end;
+
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .project-filters {
       display: flex;
+
       gap: 8px;
+
       flex-wrap: wrap;
     }
 
     .filter-btn {
       padding: 10px 16px;
+
       border-radius: 100px;
+
       background: transparent;
+
       border: 1px solid var(--border);
+
       color: #858988;
+
       font-size: 12px;
+
       transition: var(--transition);
     }
 
     .filter-btn:hover,
     .filter-btn.active {
       color: #0b0c0d;
+
       background: var(--accent);
+
       border-color: var(--accent);
     }
 
     .projects-grid {
       display: grid;
+
       grid-template-columns: repeat(12, 1fr);
+
       gap: 16px;
+
       margin-top: 60px;
     }
 
     .project {
       position: relative;
+
       min-height: 470px;
+
       border-radius: 28px;
+
       overflow: hidden;
+
       background: var(--bg-card);
+
       border: 1px solid var(--border);
+
       transition: var(--transition);
     }
 
     .project:hover {
       transform: translateY(-6px);
-      border-color: rgba(216,255,62,.25);
+
+      border-color:
+        rgba(216,255,62,.25);
     }
 
     .project:nth-child(1),
@@ -686,109 +936,166 @@
 
     .project-visual {
       position: absolute;
+
       inset: 0;
+
       overflow: hidden;
+
       background: #16191a;
     }
 
     .project-overlay {
       position: absolute;
+
       inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(8,9,10,.98) 0%,
-        rgba(8,9,10,.1) 65%
-      );
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(8,9,10,.98) 0%,
+          rgba(8,9,10,.1) 65%
+        );
+
       z-index: 2;
     }
 
-    /* UI mockups */
+
+    /* =========================================================
+       PROJECT MOCKUPS
+    ========================================================= */
 
     .mockup-browser {
       position: absolute;
+
       width: 78%;
       height: 62%;
+
       top: 12%;
       left: 11%;
+
       border-radius: 18px;
+
       background: #f0f2ed;
+
       transform: rotate(-3deg);
-      box-shadow: 0 30px 80px rgba(0,0,0,.35);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
+
       overflow: hidden;
     }
 
     .browser-top {
       height: 32px;
+
       background: #dddeda;
+
       display: flex;
+
       align-items: center;
+
       gap: 5px;
+
       padding-left: 13px;
     }
 
     .browser-dot {
       width: 7px;
       height: 7px;
+
       border-radius: 50%;
+
       background: #888;
     }
 
     .mockup-content {
       padding: 25px;
+
       color: #141616;
     }
 
     .mockup-content .mini-label {
       width: 60px;
       height: 6px;
+
       border-radius: 5px;
+
       background: #aeb4ad;
+
       margin-bottom: 18px;
     }
 
     .mockup-content h4 {
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 27px;
+
       line-height: 1;
+
       max-width: 250px;
+
       margin-bottom: 14px;
     }
 
     .mockup-content p {
       width: 75%;
       height: 7px;
+
       background: #c4c8c3;
+
       border-radius: 5px;
+
       margin-bottom: 7px;
     }
 
     .mockup-button {
       width: 90px;
       height: 30px;
+
       background: #161818;
+
       border-radius: 20px;
+
       margin-top: 20px;
     }
 
+
+    /* Mobile Mockup */
+
     .mobile-mockup {
       position: absolute;
+
       width: 190px;
       height: 370px;
+
       left: 50%;
       top: 7%;
-      transform: translateX(-50%) rotate(5deg);
+
+      transform:
+        translateX(-50%)
+        rotate(5deg);
+
       border-radius: 30px;
+
       background: #191c1d;
+
       border: 7px solid #303435;
-      box-shadow: 0 35px 80px rgba(0,0,0,.45);
+
+      box-shadow:
+        0 35px 80px rgba(0,0,0,.45);
+
       overflow: hidden;
     }
 
     .mobile-notch {
       width: 70px;
       height: 16px;
+
       background: #303435;
-      border-radius: 0 0 12px 12px;
+
+      border-radius:
+        0 0 12px 12px;
+
       margin: auto;
     }
 
@@ -799,120 +1106,191 @@
     .mobile-header {
       width: 60%;
       height: 8px;
+
       background: var(--accent);
+
       border-radius: 8px;
+
       margin-bottom: 20px;
     }
 
     .mobile-block {
       height: 110px;
+
       border-radius: 15px;
+
       background: #292e2f;
+
       margin-bottom: 12px;
     }
 
     .mobile-line {
       width: 85%;
       height: 6px;
+
       border-radius: 5px;
+
       background: #464b4b;
+
       margin: 9px 0;
     }
 
+
+    /* Dashboard */
+
     .dashboard {
       position: absolute;
+
       width: 78%;
       height: 67%;
+
       top: 10%;
       left: 11%;
+
       background: #f3f4ef;
+
       border-radius: 18px;
+
       transform: rotate(2deg);
+
       display: flex;
+
       overflow: hidden;
+
       color: #171919;
-      box-shadow: 0 30px 70px rgba(0,0,0,.35);
+
+      box-shadow:
+        0 30px 70px rgba(0,0,0,.35);
     }
 
     .dash-side {
       width: 24%;
+
       background: #1a1d1e;
+
       padding: 18px 10px;
     }
 
     .dash-side-line {
       height: 7px;
+
       width: 70%;
+
       background: #555;
+
       border-radius: 4px;
+
       margin: 17px auto;
     }
 
     .dash-main {
       flex: 1;
+
       padding: 20px;
     }
 
     .dash-heading {
       width: 35%;
+
       height: 9px;
+
       background: #252828;
+
       border-radius: 5px;
+
       margin-bottom: 25px;
     }
 
     .dash-cards {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+
+      grid-template-columns:
+        repeat(3,1fr);
+
       gap: 8px;
     }
 
     .dash-card {
       height: 70px;
+
       background: #e1e4df;
+
       border-radius: 9px;
     }
 
     .chart {
       height: 110px;
+
       margin-top: 15px;
+
       border-radius: 10px;
+
       background:
-        linear-gradient(160deg, transparent 48%, #a5aaa4 49%, transparent 51%),
-        linear-gradient(20deg, transparent 48%, #c1c6c0 49%, transparent 51%);
+        linear-gradient(
+          160deg,
+          transparent 48%,
+          #a5aaa4 49%,
+          transparent 51%
+        ),
+        linear-gradient(
+          20deg,
+          transparent 48%,
+          #c1c6c0 49%,
+          transparent 51%
+        );
+
       background-size: 60px 60px;
+
       border: 1px solid #d6d9d4;
     }
 
+
+    /* Project Info */
+
     .project-info {
       position: absolute;
+
       z-index: 5;
+
       bottom: 28px;
+
       left: 30px;
       right: 30px;
     }
 
     .project-category {
       display: inline-block;
+
       color: var(--accent);
+
       font-size: 11px;
+
       text-transform: uppercase;
+
       letter-spacing: .1em;
+
       margin-bottom: 9px;
+
       font-weight: 700;
     }
 
     .project-info h3 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(25px, 3vw, 36px);
+
+      font-size:
+        clamp(25px, 3vw, 36px);
+
       line-height: 1;
+
       margin-bottom: 8px;
     }
 
     .project-info p {
       color: #a4a7a5;
+
       font-size: 13px;
     }
+
 
     /* =========================================================
        PROCESS
@@ -920,40 +1298,56 @@
 
     .process {
       background: #0e1011;
+
       border-top: 1px solid var(--border);
+
       border-bottom: 1px solid var(--border);
     }
 
     .process-grid {
       margin-top: 60px;
+
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+
+      grid-template-columns:
+        repeat(4,1fr);
+
       gap: 1px;
+
       background: var(--border);
     }
 
     .process-step {
       background: #0e1011;
+
       padding: 35px 28px;
+
       min-height: 260px;
     }
 
     .process-step-number {
       color: var(--accent);
+
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 14px;
     }
 
     .process-step h3 {
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 23px;
-      margin: 60px 0 12px;
+
+      margin:
+        60px 0 12px;
     }
 
     .process-step p {
       color: var(--muted);
+
       font-size: 14px;
     }
+
 
     /* =========================================================
        EXPERIENCE
@@ -961,7 +1355,9 @@
 
     .experience-layout {
       display: grid;
+
       grid-template-columns: .65fr 1.35fr;
+
       gap: 100px;
     }
 
@@ -971,37 +1367,54 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 130px 1fr;
+
+      grid-template-columns:
+        130px 1fr;
+
       gap: 35px;
+
       padding: 30px 0;
-      border-top: 1px solid var(--border);
+
+      border-top:
+        1px solid var(--border);
     }
 
     .timeline-date {
       color: var(--accent);
+
       font-size: 12px;
+
       text-transform: uppercase;
+
       line-height: 1.5;
     }
 
     .timeline-content h3 {
       font-family: "Space Grotesk", sans-serif;
+
       font-size: 25px;
+
       margin-bottom: 5px;
     }
 
     .timeline-content h4 {
       color: #777b79;
+
       font-size: 13px;
+
       font-weight: 500;
+
       margin-bottom: 15px;
     }
 
     .timeline-content p {
       max-width: 630px;
+
       color: var(--muted);
+
       font-size: 14px;
     }
+
 
     /* =========================================================
        TESTIMONIALS
@@ -1009,20 +1422,28 @@
 
     .testimonials {
       background: #0e1011;
+
       border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+
+      border-bottom:
+        1px solid var(--border);
     }
 
     .testimonial-wrapper {
       position: relative;
+
       margin-top: 60px;
     }
 
     .testimonial-track {
       display: flex;
+
       gap: 16px;
+
       overflow-x: auto;
+
       scroll-snap-type: x mandatory;
+
       scrollbar-width: none;
     }
 
@@ -1032,59 +1453,87 @@
 
     .testimonial {
       flex: 0 0 calc(50% - 8px);
+
       scroll-snap-align: start;
+
       padding: 35px;
+
       min-height: 310px;
+
       background: var(--bg-card);
+
       border: 1px solid var(--border);
+
       border-radius: 25px;
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: space-between;
     }
 
     .quote-mark {
       color: var(--accent);
+
       font-family: Georgia, serif;
+
       font-size: 60px;
+
       line-height: .7;
     }
 
     .testimonial p {
       margin-top: 25px;
+
       color: #d0d2cf;
+
       font-size: 18px;
+
       line-height: 1.6;
     }
 
     .testimonial-author {
       display: flex;
+
       align-items: center;
+
       gap: 13px;
+
       margin-top: 30px;
     }
 
     .author-avatar {
       width: 43px;
       height: 43px;
+
       border-radius: 50%;
+
       display: grid;
+
       place-items: center;
+
       background: #25292a;
+
       color: var(--accent);
+
       font-weight: 700;
+
       font-size: 13px;
     }
 
     .testimonial-author strong {
       display: block;
+
       font-size: 13px;
     }
 
     .testimonial-author span {
       color: var(--muted);
+
       font-size: 11px;
     }
+
 
     /* =========================================================
        CONTACT
@@ -1096,63 +1545,102 @@
 
     .contact-box {
       position: relative;
+
       overflow: hidden;
+
       padding: 80px;
+
       border-radius: 35px;
+
       background:
-        radial-gradient(circle at 80% 20%, rgba(216,255,62,.16), transparent 30%),
-        linear-gradient(135deg,#171a1b,#101213);
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(216,255,62,.16),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #171a1b,
+          #101213
+        );
+
       border: 1px solid var(--border);
     }
 
     .contact-box h2 {
       max-width: 850px;
+
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(45px, 7vw, 88px);
+
+      font-size:
+        clamp(45px, 7vw, 88px);
+
       line-height: .92;
+
       letter-spacing: -.06em;
     }
 
     .contact-box p {
       max-width: 600px;
+
       color: var(--muted);
+
       margin-top: 25px;
+
       font-size: 17px;
     }
 
     .contact-actions {
       display: flex;
+
       gap: 12px;
+
       flex-wrap: wrap;
+
       margin-top: 35px;
     }
 
     .contact-details {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+
+      grid-template-columns:
+        repeat(2,1fr);
+
       gap: 12px;
+
       margin-top: 60px;
+
       max-width: 650px;
     }
 
     .contact-detail {
       padding: 19px 20px;
+
       border: 1px solid var(--border);
+
       border-radius: 16px;
-      background: rgba(255,255,255,.02);
+
+      background:
+        rgba(255,255,255,.02);
     }
 
     .contact-detail small {
       display: block;
+
       color: #666a69;
+
       text-transform: uppercase;
+
       letter-spacing: .1em;
+
       font-size: 10px;
+
       margin-bottom: 5px;
     }
 
     .contact-detail a {
       font-size: 14px;
+
       transition: var(--transition);
     }
 
@@ -1160,31 +1648,45 @@
       color: var(--accent);
     }
 
+    .contact-detail span {
+      font-size: 14px;
+    }
+
+
     /* =========================================================
        FOOTER
     ========================================================= */
 
     footer {
       padding: 30px 0;
-      border-top: 1px solid var(--border);
+
+      border-top:
+        1px solid var(--border);
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
+
       gap: 20px;
     }
 
     .footer-copy {
       color: #666a69;
+
       font-size: 12px;
     }
 
     .footer-links {
       display: flex;
+
       gap: 20px;
+
       color: #898d8b;
+
       font-size: 12px;
     }
 
@@ -1192,23 +1694,32 @@
       color: var(--accent);
     }
 
+
     /* =========================================================
-       REVEAL ANIMATION
+       SCROLL REVEAL
     ========================================================= */
 
     .reveal {
       opacity: 0;
-      transform: translateY(25px);
-      transition: opacity .7s ease, transform .7s ease;
+
+      transform:
+        translateY(25px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
     }
 
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0);
+
+      transform:
+        translateY(0);
     }
 
+
     /* =========================================================
-       RESPONSIVE
+       TABLET
     ========================================================= */
 
     @media (max-width: 1000px) {
@@ -1218,33 +1729,43 @@
       }
 
       .hero-visual {
-        min-height: 450px;
+        min-height: 500px;
       }
 
       .services-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .about-layout,
       .experience-layout {
         grid-template-columns: 1fr;
+
         gap: 50px;
       }
 
       .projects-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .project:nth-child(n) {
         grid-column: span 1;
+
         min-height: 420px;
       }
 
       .process-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
     }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
     @media (max-width: 760px) {
 
@@ -1253,25 +1774,44 @@
       }
 
       .container {
-        width: min(100% - 28px, var(--container));
+        width:
+          min(
+            100% - 28px,
+            var(--container)
+          );
       }
 
       .nav {
         height: 72px;
       }
 
+
+      /* Mobile Navigation */
+
       .nav-links {
         position: fixed;
+
         top: 72px;
+
         left: 14px;
         right: 14px;
+
         display: none;
+
         flex-direction: column;
+
         align-items: stretch;
+
         gap: 0;
+
         padding: 10px;
-        background: rgba(16,18,19,.98);
-        border: 1px solid var(--border);
+
+        background:
+          rgba(16,18,19,.98);
+
+        border:
+          1px solid var(--border);
+
         border-radius: 18px;
       }
 
@@ -1281,6 +1821,7 @@
 
       .nav-links li a {
         display: block;
+
         padding: 15px;
       }
 
@@ -1292,13 +1833,22 @@
         display: block;
       }
 
+
+      /* Hero */
+
       .hero {
         min-height: auto;
+
         padding-top: 120px;
       }
 
       .hero h1 {
-        font-size: clamp(51px, 15vw, 80px);
+        font-size:
+          clamp(
+            51px,
+            15vw,
+            80px
+          );
       }
 
       .hero-copy {
@@ -1306,33 +1856,35 @@
       }
 
       .hero-visual {
-        min-height: 430px;
+        min-height: 440px;
       }
 
-      .profile-card {
-        height: 390px;
+
+      /* Personal image */
+
+      .profile-image {
         width: 290px;
-      }
 
-      .profile-shape {
-        width: 175px;
-        height: 245px;
-      }
+        height: 390px;
 
-      .profile-head {
-        width: 100px;
-        height: 100px;
+        transform:
+          rotate(2deg);
       }
 
       .float-one {
-        left: 3px;
+        left: -5px;
+
         top: 35px;
       }
 
       .float-two {
-        right: 3px;
+        right: -5px;
+
         bottom: 35px;
       }
+
+
+      /* Services */
 
       .services-grid {
         grid-template-columns: 1fr;
@@ -1342,13 +1894,22 @@
         min-height: 230px;
       }
 
+
+      /* Stats */
+
       .stats {
         grid-template-columns: 1fr;
       }
 
+
+      /* Projects */
+
       .projects-head {
-        align-items: flex-start;
-        flex-direction: column;
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
       }
 
       .projects-grid {
@@ -1357,25 +1918,41 @@
 
       .project:nth-child(n) {
         grid-column: span 1;
+
         min-height: 390px;
       }
+
+
+      /* Process */
 
       .process-grid {
         grid-template-columns: 1fr;
       }
 
+
+      /* Experience */
+
       .timeline-item {
         grid-template-columns: 1fr;
+
         gap: 12px;
       }
 
+
+      /* Testimonials */
+
       .testimonial {
         flex-basis: 88%;
+
         min-height: 300px;
       }
 
+
+      /* Contact */
+
       .contact-box {
         padding: 40px 25px;
+
         border-radius: 25px;
       }
 
@@ -1383,15 +1960,27 @@
         grid-template-columns: 1fr;
       }
 
+
+      /* Footer */
+
       .footer-inner {
-        align-items: flex-start;
-        flex-direction: column;
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
       }
 
       .footer-links {
         flex-wrap: wrap;
       }
+
     }
+
+
+    /* =========================================================
+       SMALL MOBILE
+    ========================================================= */
 
     @media (max-width: 430px) {
 
@@ -1404,11 +1993,12 @@
       }
 
       .hero-visual {
-        min-height: 390px;
+        min-height: 410px;
       }
 
-      .profile-card {
+      .profile-image {
         width: 250px;
+
         height: 350px;
       }
 
@@ -1446,6 +2036,9 @@
 
 <body>
 
+
+  <!-- Background -->
+
   <div class="page-grid"></div>
   <div class="page-glow"></div>
 
@@ -1459,46 +2052,95 @@
     <div class="container nav">
 
       <a href="#home" class="logo">
-        <span class="logo-mark">D</span>
-        <span>Designer<span class="accent">.</span></span>
+
+        <span class="logo-mark">
+          D
+        </span>
+
+        <span>
+          Designer<span class="accent">.</span>
+        </span>
+
       </a>
 
+
       <nav>
+
         <ul class="nav-links" id="navLinks">
 
           <li>
-            <a href="#home" class="nav-link active">Home</a>
+            <a
+              href="#home"
+              class="nav-link active"
+            >
+              Home
+            </a>
           </li>
 
           <li>
-            <a href="#services" class="nav-link">Services</a>
+            <a
+              href="#services"
+              class="nav-link"
+            >
+              Services
+            </a>
           </li>
 
           <li>
-            <a href="#about" class="nav-link">About</a>
+            <a
+              href="#about"
+              class="nav-link"
+            >
+              About
+            </a>
           </li>
 
           <li>
-            <a href="#projects" class="nav-link">Projects</a>
+            <a
+              href="#projects"
+              class="nav-link"
+            >
+              Projects
+            </a>
           </li>
 
           <li>
-            <a href="#experience" class="nav-link">Experience</a>
+            <a
+              href="#experience"
+              class="nav-link"
+            >
+              Experience
+            </a>
           </li>
 
           <li>
-            <a href="#contact" class="nav-link">Contact</a>
+            <a
+              href="#contact"
+              class="nav-link"
+            >
+              Contact
+            </a>
           </li>
 
         </ul>
+
       </nav>
 
-      <a href="#contact" class="nav-cta">
+
+      <a
+        href="#contact"
+        class="nav-cta"
+      >
         Let's Talk
         <span>↗</span>
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+      >
         ☰
       </button>
 
@@ -1507,15 +2149,26 @@
   </header>
 
 
+  <!-- =======================================================
+       MAIN
+  ======================================================== -->
+
   <main>
+
 
     <!-- =====================================================
          HERO
     ====================================================== -->
 
-    <section class="hero" id="home">
+    <section
+      class="hero"
+      id="home"
+    >
 
       <div class="container hero-layout">
+
+
+        <!-- Hero Text -->
 
         <div class="hero-content reveal">
 
@@ -1523,26 +2176,35 @@
             UI / UX Designer · Dhaka, Bangladesh
           </div>
 
+
           <h1>
             Designing digital
             <span>experiences</span>
             people enjoy.
           </h1>
 
+
           <p class="hero-copy">
-            I design clear, modern and user-focused interfaces for
-            websites, mobile apps and digital products — turning
-            complex ideas into simple experiences.
+            I design clear, modern and user-focused interfaces
+            for websites, mobile apps and digital products —
+            turning complex ideas into simple experiences.
           </p>
+
 
           <div class="hero-actions">
 
-            <a href="#projects" class="btn btn-primary">
+            <a
+              href="#projects"
+              class="btn btn-primary"
+            >
               View My Work
               <span>↗</span>
             </a>
 
-            <a href="#contact" class="btn btn-secondary">
+            <a
+              href="#contact"
+              class="btn btn-secondary"
+            >
               Let's Work Together
             </a>
 
@@ -1551,35 +2213,66 @@
         </div>
 
 
+        <!-- =================================================
+             HERO IMAGE
+        ================================================== -->
+
         <div class="hero-visual reveal">
 
+
+          <!-- Floating card in FRONT -->
+
           <div class="floating-card float-one">
-            <small>Specialized in</small>
-            <strong>UI / UX Design</strong>
-          </div>
 
-          <div class="profile-card">
+            <small>
+              Specialized in
+            </small>
 
-            <div class="profile-head"></div>
-
-            <div class="profile-shape"></div>
-
-            <div class="profile-line"></div>
+            <strong>
+              UI / UX Design
+            </strong>
 
           </div>
+
+
+          <!-- Personal Image -->
+
+          <div class="profile-image">
+
+            <img
+              src="images/profile.png"
+              alt="UI UX Designer based in Dhaka Bangladesh"
+            >
+
+          </div>
+
+
+          <!-- Bottom card -->
 
           <div class="floating-card float-two">
-            <small>Based in</small>
-            <strong>Dhaka, Bangladesh</strong>
+
+            <small>
+              Based in
+            </small>
+
+            <strong>
+              Dhaka, Bangladesh
+            </strong>
+
           </div>
+
 
         </div>
 
       </div>
 
+
       <div class="container scroll-note">
+
         <span class="scroll-line"></span>
+
         Scroll to explore
+
       </div>
 
     </section>
@@ -1589,23 +2282,31 @@
          SERVICES
     ====================================================== -->
 
-    <section class="services" id="services">
+    <section
+      class="services"
+      id="services"
+    >
 
       <div class="container">
 
+
         <div class="reveal">
 
-          <div class="eyebrow">What I Do</div>
+          <div class="eyebrow">
+            What I Do
+          </div>
 
           <h2 class="section-title">
             Design that solves
-            <span class="accent">real problems.</span>
+            <span class="accent">
+              real problems.
+            </span>
           </h2>
 
           <p class="section-description">
-            From first wireframe to polished interface, every design
-            decision is made to improve clarity, usability and the
-            overall product experience.
+            From first wireframe to polished interface, every
+            design decision is made to improve clarity,
+            usability and the overall product experience.
           </p>
 
         </div>
@@ -1613,17 +2314,24 @@
 
         <div class="services-grid">
 
+
           <article class="service-card reveal">
 
-            <span class="service-number">01</span>
+            <span class="service-number">
+              01
+            </span>
 
-            <div class="service-icon">⌁</div>
+            <div class="service-icon">
+              ⌁
+            </div>
 
-            <h3>Website Design</h3>
+            <h3>
+              Website Design
+            </h3>
 
             <p>
-              Modern websites designed to communicate your value
-              clearly and guide visitors toward action.
+              Modern websites designed to communicate your
+              value clearly and guide visitors toward action.
             </p>
 
           </article>
@@ -1631,15 +2339,21 @@
 
           <article class="service-card reveal">
 
-            <span class="service-number">02</span>
+            <span class="service-number">
+              02
+            </span>
 
-            <div class="service-icon">▣</div>
+            <div class="service-icon">
+              ▣
+            </div>
 
-            <h3>Mobile App Design</h3>
+            <h3>
+              Mobile App Design
+            </h3>
 
             <p>
-              Intuitive mobile interfaces that make important tasks
-              simple, fast and enjoyable.
+              Intuitive mobile interfaces that make important
+              tasks simple, fast and enjoyable.
             </p>
 
           </article>
@@ -1647,15 +2361,21 @@
 
           <article class="service-card reveal">
 
-            <span class="service-number">03</span>
+            <span class="service-number">
+              03
+            </span>
 
-            <div class="service-icon">◫</div>
+            <div class="service-icon">
+              ◫
+            </div>
 
-            <h3>Responsive Design</h3>
+            <h3>
+              Responsive Design
+            </h3>
 
             <p>
-              Interfaces that stay consistent and usable across
-              desktop, tablet and mobile screens.
+              Interfaces that stay consistent and usable
+              across desktop, tablet and mobile screens.
             </p>
 
           </article>
@@ -1663,18 +2383,25 @@
 
           <article class="service-card reveal">
 
-            <span class="service-number">04</span>
+            <span class="service-number">
+              04
+            </span>
 
-            <div class="service-icon">⌘</div>
+            <div class="service-icon">
+              ⌘
+            </div>
 
-            <h3>Dashboard Design</h3>
+            <h3>
+              Dashboard Design
+            </h3>
 
             <p>
-              Data-heavy interfaces organized into clear, useful and
-              easy-to-understand experiences.
+              Data-heavy interfaces organized into clear,
+              useful and easy-to-understand experiences.
             </p>
 
           </article>
+
 
         </div>
 
@@ -1687,9 +2414,13 @@
          ABOUT
     ====================================================== -->
 
-    <section class="about" id="about">
+    <section
+      class="about"
+      id="about"
+    >
 
       <div class="container about-layout">
+
 
         <div class="reveal">
 
@@ -1704,37 +2435,65 @@
 
           <h2>
             Good design should
-            feel <span class="accent">obvious.</span>
+            feel <span class="accent">
+              obvious.
+            </span>
           </h2>
 
-          <p class="about-text">
-            I'm a UI/UX designer based in Dhaka, Bangladesh, focused
-            on creating digital experiences that balance visual
-            quality with usability.
-          </p>
 
           <p class="about-text">
-            My approach starts with understanding the user and the
-            business goal. From there, I turn ideas into structured
-            interfaces, thoughtful interactions and polished visual
-            systems.
+            I'm a UI/UX designer based in Dhaka, Bangladesh,
+            focused on creating digital experiences that
+            balance visual quality with usability.
           </p>
+
+
+          <p class="about-text">
+            My approach starts with understanding the user
+            and the business goal. From there, I turn ideas
+            into structured interfaces, thoughtful interactions
+            and polished visual systems.
+          </p>
+
 
           <div class="stats">
 
             <div class="stat">
-              <strong>UI</strong>
-              <span>Interface Design</span>
+
+              <strong>
+                UI
+              </strong>
+
+              <span>
+                Interface Design
+              </span>
+
             </div>
 
-            <div class="stat">
-              <strong>UX</strong>
-              <span>User Experience</span>
-            </div>
 
             <div class="stat">
-              <strong>Figma</strong>
-              <span>Design Workflow</span>
+
+              <strong>
+                UX
+              </strong>
+
+              <span>
+                User Experience
+              </span>
+
+            </div>
+
+
+            <div class="stat">
+
+              <strong>
+                Figma
+              </strong>
+
+              <span>
+                Design Workflow
+              </span>
+
             </div>
 
           </div>
@@ -1750,19 +2509,28 @@
          PROJECTS
     ====================================================== -->
 
-    <section class="projects" id="projects">
+    <section
+      class="projects"
+      id="projects"
+    >
 
       <div class="container">
 
+
         <div class="projects-head reveal">
+
 
           <div>
 
-            <div class="eyebrow">Selected Work</div>
+            <div class="eyebrow">
+              Selected Work
+            </div>
 
             <h2 class="section-title">
               A selection of
-              <span class="accent">recent work.</span>
+              <span class="accent">
+                recent work.
+              </span>
             </h2>
 
           </div>
@@ -1770,23 +2538,36 @@
 
           <div class="project-filters">
 
-            <button class="filter-btn active" data-filter="all">
+            <button
+              class="filter-btn active"
+              data-filter="all"
+            >
               All
             </button>
 
-            <button class="filter-btn" data-filter="web">
+            <button
+              class="filter-btn"
+              data-filter="web"
+            >
               Web
             </button>
 
-            <button class="filter-btn" data-filter="mobile">
+            <button
+              class="filter-btn"
+              data-filter="mobile"
+            >
               Mobile
             </button>
 
-            <button class="filter-btn" data-filter="dashboard">
+            <button
+              class="filter-btn"
+              data-filter="dashboard"
+            >
               Dashboard
             </button>
 
           </div>
+
 
         </div>
 
@@ -1794,19 +2575,25 @@
         <div class="projects-grid">
 
 
-          <!-- PROJECT 01 -->
+          <!-- Project 1 -->
 
-          <article class="project reveal" data-category="web">
+          <article
+            class="project reveal"
+            data-category="web"
+          >
 
             <div class="project-visual">
 
               <div class="mockup-browser">
 
                 <div class="browser-top">
+
                   <span class="browser-dot"></span>
                   <span class="browser-dot"></span>
                   <span class="browser-dot"></span>
+
                 </div>
+
 
                 <div class="mockup-content">
 
@@ -1828,7 +2615,9 @@
 
             </div>
 
+
             <div class="project-overlay"></div>
+
 
             <div class="project-info">
 
@@ -1836,7 +2625,9 @@
                 Website Design
               </span>
 
-              <h3>Business Landing Page</h3>
+              <h3>
+                Business Landing Page
+              </h3>
 
               <p>
                 Conversion-focused web experience
@@ -1848,9 +2639,12 @@
           </article>
 
 
-          <!-- PROJECT 02 -->
+          <!-- Project 2 -->
 
-          <article class="project reveal" data-category="mobile">
+          <article
+            class="project reveal"
+            data-category="mobile"
+          >
 
             <div class="project-visual">
 
@@ -1865,9 +2659,13 @@
                   <div class="mobile-block"></div>
 
                   <div class="mobile-line"></div>
+
                   <div class="mobile-line"></div>
 
-                  <div class="mobile-block" style="height:70px;"></div>
+                  <div
+                    class="mobile-block"
+                    style="height:70px;"
+                  ></div>
 
                 </div>
 
@@ -1875,7 +2673,9 @@
 
             </div>
 
+
             <div class="project-overlay"></div>
+
 
             <div class="project-info">
 
@@ -1883,7 +2683,9 @@
                 Mobile App
               </span>
 
-              <h3>Mobile Product Concept</h3>
+              <h3>
+                Mobile Product Concept
+              </h3>
 
               <p>
                 Simple navigation and task-focused
@@ -1895,9 +2697,12 @@
           </article>
 
 
-          <!-- PROJECT 03 -->
+          <!-- Project 3 -->
 
-          <article class="project reveal" data-category="dashboard">
+          <article
+            class="project reveal"
+            data-category="dashboard"
+          >
 
             <div class="project-visual">
 
@@ -1911,21 +2716,31 @@
                   ></div>
 
                   <div class="dash-side-line"></div>
+
                   <div class="dash-side-line"></div>
+
                   <div class="dash-side-line"></div>
+
                   <div class="dash-side-line"></div>
 
                 </div>
+
 
                 <div class="dash-main">
 
                   <div class="dash-heading"></div>
 
+
                   <div class="dash-cards">
+
                     <div class="dash-card"></div>
+
                     <div class="dash-card"></div>
+
                     <div class="dash-card"></div>
+
                   </div>
+
 
                   <div class="chart"></div>
 
@@ -1935,7 +2750,9 @@
 
             </div>
 
+
             <div class="project-overlay"></div>
+
 
             <div class="project-info">
 
@@ -1943,7 +2760,9 @@
                 Dashboard
               </span>
 
-              <h3>Analytics Dashboard</h3>
+              <h3>
+                Analytics Dashboard
+              </h3>
 
               <p>
                 Information architecture designed
@@ -1955,9 +2774,12 @@
           </article>
 
 
-          <!-- PROJECT 04 -->
+          <!-- Project 4 -->
 
-          <article class="project reveal" data-category="web">
+          <article
+            class="project reveal"
+            data-category="web"
+          >
 
             <div class="project-visual">
 
@@ -1971,10 +2793,13 @@
               >
 
                 <div class="browser-top">
+
                   <span class="browser-dot"></span>
                   <span class="browser-dot"></span>
                   <span class="browser-dot"></span>
+
                 </div>
+
 
                 <div class="mockup-content">
 
@@ -2003,7 +2828,9 @@
 
             </div>
 
+
             <div class="project-overlay"></div>
+
 
             <div class="project-info">
 
@@ -2011,7 +2838,9 @@
                 Responsive Design
               </span>
 
-              <h3>Modern Product Website</h3>
+              <h3>
+                Modern Product Website
+              </h3>
 
               <p>
                 Responsive interface system designed
@@ -2021,6 +2850,7 @@
             </div>
 
           </article>
+
 
         </div>
 
@@ -2037,18 +2867,23 @@
 
       <div class="container">
 
+
         <div class="reveal">
 
-          <div class="eyebrow">How I Work</div>
+          <div class="eyebrow">
+            How I Work
+          </div>
 
           <h2 class="section-title">
             From idea to
-            <span class="accent">interface.</span>
+            <span class="accent">
+              interface.
+            </span>
           </h2>
 
           <p class="section-description">
-            A straightforward design process that keeps the user,
-            business objective and final product aligned.
+            A straightforward design process that keeps the
+            user, business objective and final product aligned.
           </p>
 
         </div>
@@ -2056,13 +2891,16 @@
 
         <div class="process-grid">
 
+
           <div class="process-step reveal">
 
             <span class="process-step-number">
               01 / DISCOVER
             </span>
 
-            <h3>Understand</h3>
+            <h3>
+              Understand
+            </h3>
 
             <p>
               Understand the product, users, goals and problems
@@ -2078,11 +2916,13 @@
               02 / DEFINE
             </span>
 
-            <h3>Structure</h3>
+            <h3>
+              Structure
+            </h3>
 
             <p>
-              Organize information, user flows and content into a
-              clear structure that is easy to navigate.
+              Organize information, user flows and content into
+              a clear structure that is easy to navigate.
             </p>
 
           </div>
@@ -2094,11 +2934,14 @@
               03 / DESIGN
             </span>
 
-            <h3>Visualize</h3>
+            <h3>
+              Visualize
+            </h3>
 
             <p>
-              Create polished interfaces, components and responsive
-              layouts while keeping usability at the center.
+              Create polished interfaces, components and
+              responsive layouts while keeping usability
+              at the center.
             </p>
 
           </div>
@@ -2110,14 +2953,17 @@
               04 / REFINE
             </span>
 
-            <h3>Improve</h3>
+            <h3>
+              Improve
+            </h3>
 
             <p>
-              Review the design, identify friction and refine the
-              experience before handing it off for development.
+              Review the design, identify friction and refine
+              the experience before handing it off for development.
             </p>
 
           </div>
+
 
         </div>
 
@@ -2130,17 +2976,26 @@
          EXPERIENCE
     ====================================================== -->
 
-    <section class="experience" id="experience">
+    <section
+      class="experience"
+      id="experience"
+    >
 
       <div class="container experience-layout">
 
+
         <div class="reveal">
 
-          <div class="eyebrow">Experience</div>
+          <div class="eyebrow">
+            Experience
+          </div>
 
           <h2 class="section-title">
             Building experience
-            through <span class="accent">real work.</span>
+            through
+            <span class="accent">
+              real work.
+            </span>
           </h2>
 
           <p class="section-description">
@@ -2153,6 +3008,7 @@
 
         <div class="timeline">
 
+
           <div class="timeline-item reveal">
 
             <div class="timeline-date">
@@ -2161,7 +3017,9 @@
 
             <div class="timeline-content">
 
-              <h3>UI/UX Designer</h3>
+              <h3>
+                UI/UX Designer
+              </h3>
 
               <h4>
                 Company / Agency Name
@@ -2186,7 +3044,9 @@
 
             <div class="timeline-content">
 
-              <h3>Product / Visual Designer</h3>
+              <h3>
+                Product / Visual Designer
+              </h3>
 
               <h4>
                 Company / Agency Name
@@ -2211,20 +3071,24 @@
 
             <div class="timeline-content">
 
-              <h3>Freelance UI/UX Designer</h3>
+              <h3>
+                Freelance UI/UX Designer
+              </h3>
 
               <h4>
                 Remote Projects
               </h4>
 
               <p>
-                Designing websites, mobile applications, dashboards
-                and responsive digital experiences for clients.
+                Designing websites, mobile applications,
+                dashboards and responsive digital experiences
+                for clients.
               </p>
 
             </div>
 
           </div>
+
 
         </div>
 
@@ -2241,13 +3105,19 @@
 
       <div class="container">
 
+
         <div class="reveal">
 
-          <div class="eyebrow">Testimonials</div>
+          <div class="eyebrow">
+            Testimonials
+          </div>
 
           <h2 class="section-title">
             What people say
-            about the <span class="accent">work.</span>
+            about the
+            <span class="accent">
+              work.
+            </span>
           </h2>
 
         </div>
@@ -2262,7 +3132,9 @@
 
               <div>
 
-                <div class="quote-mark">“</div>
+                <div class="quote-mark">
+                  “
+                </div>
 
                 <p>
                   Add a genuine client or colleague testimonial
@@ -2272,6 +3144,7 @@
 
               </div>
 
+
               <div class="testimonial-author">
 
                 <div class="author-avatar">
@@ -2279,8 +3152,15 @@
                 </div>
 
                 <div>
-                  <strong>Client Name</strong>
-                  <span>Project / Company</span>
+
+                  <strong>
+                    Client Name
+                  </strong>
+
+                  <span>
+                    Project / Company
+                  </span>
+
                 </div>
 
               </div>
@@ -2292,7 +3172,9 @@
 
               <div>
 
-                <div class="quote-mark">“</div>
+                <div class="quote-mark">
+                  “
+                </div>
 
                 <p>
                   Add another real testimonial here. Keep it
@@ -2302,6 +3184,7 @@
 
               </div>
 
+
               <div class="testimonial-author">
 
                 <div class="author-avatar">
@@ -2309,8 +3192,15 @@
                 </div>
 
                 <div>
-                  <strong>Client Name</strong>
-                  <span>Project / Company</span>
+
+                  <strong>
+                    Client Name
+                  </strong>
+
+                  <span>
+                    Project / Company
+                  </span>
+
                 </div>
 
               </div>
@@ -2322,7 +3212,9 @@
 
               <div>
 
-                <div class="quote-mark">“</div>
+                <div class="quote-mark">
+                  “
+                </div>
 
                 <p>
                   A short testimonial about collaboration,
@@ -2332,6 +3224,7 @@
 
               </div>
 
+
               <div class="testimonial-author">
 
                 <div class="author-avatar">
@@ -2339,13 +3232,21 @@
                 </div>
 
                 <div>
-                  <strong>Client / Colleague</strong>
-                  <span>Company / Role</span>
+
+                  <strong>
+                    Client / Colleague
+                  </strong>
+
+                  <span>
+                    Company / Role
+                  </span>
+
                 </div>
 
               </div>
 
             </article>
+
 
           </div>
 
@@ -2360,26 +3261,37 @@
          CONTACT
     ====================================================== -->
 
-    <section class="contact" id="contact">
+    <section
+      class="contact"
+      id="contact"
+    >
 
       <div class="container">
 
+
         <div class="contact-box reveal">
+
 
           <div class="eyebrow">
             Available for opportunities
           </div>
 
+
           <h2>
             Have a project
-            or <span class="accent">opportunity?</span>
+            or
+            <span class="accent">
+              opportunity?
+            </span>
           </h2>
 
+
           <p>
-            Whether you're hiring a UI/UX designer or need someone
-            to turn your product idea into a polished interface,
-            let's start a conversation.
+            Whether you're hiring a UI/UX designer or need
+            someone to turn your product idea into a polished
+            interface, let's start a conversation.
           </p>
+
 
           <div class="contact-actions">
 
@@ -2390,6 +3302,7 @@
               Email Me
               <span>↗</span>
             </a>
+
 
             <a
               href="tel:01234665489"
@@ -2403,11 +3316,16 @@
 
           <div class="contact-details">
 
+
             <div class="contact-detail">
 
-              <small>Email</small>
+              <small>
+                Email
+              </small>
 
-              <a href="mailto:example@gmail.com">
+              <a
+                href="mailto:example@gmail.com"
+              >
                 example@gmail.com
               </a>
 
@@ -2416,9 +3334,13 @@
 
             <div class="contact-detail">
 
-              <small>Phone</small>
+              <small>
+                Phone
+              </small>
 
-              <a href="tel:01234665489">
+              <a
+                href="tel:01234665489"
+              >
                 01234665489
               </a>
 
@@ -2427,7 +3349,9 @@
 
             <div class="contact-detail">
 
-              <small>Location</small>
+              <small>
+                Location
+              </small>
 
               <span>
                 Dhaka, Bangladesh
@@ -2438,13 +3362,16 @@
 
             <div class="contact-detail">
 
-              <small>Open to</small>
+              <small>
+                Open to
+              </small>
 
               <span>
                 Projects & Jobs
               </span>
 
             </div>
+
 
           </div>
 
@@ -2453,6 +3380,7 @@
       </div>
 
     </section>
+
 
   </main>
 
@@ -2465,17 +3393,33 @@
 
     <div class="container footer-inner">
 
+
       <div class="footer-copy">
-        © <span id="year"></span> Designer Portfolio. All rights reserved.
+
+        ©
+        <span id="year"></span>
+        Designer Portfolio.
+        All rights reserved.
+
       </div>
+
 
       <div class="footer-links">
 
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
 
       </div>
+
 
     </div>
 
@@ -2488,89 +3432,140 @@
 
   <script>
 
+
     /* =======================================================
        MOBILE MENU
     ======================================================== */
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+    const menuBtn =
+      document.getElementById("menuBtn");
 
-    menuBtn.addEventListener("click", () => {
-
-      navLinks.classList.toggle("open");
-
-      menuBtn.textContent =
-        navLinks.classList.contains("open") ? "×" : "☰";
-
-    });
+    const navLinks =
+      document.getElementById("navLinks");
 
 
-    /* Close mobile menu after clicking */
+    menuBtn.addEventListener(
+      "click",
+      () => {
 
-    document.querySelectorAll(".nav-link").forEach(link => {
+        navLinks.classList.toggle("open");
 
-      link.addEventListener("click", () => {
+        menuBtn.textContent =
+          navLinks.classList.contains("open")
+            ? "×"
+            : "☰";
 
-        navLinks.classList.remove("open");
+      }
+    );
 
-        menuBtn.textContent = "☰";
+
+    /* Close menu */
+
+    document
+      .querySelectorAll(".nav-link")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navLinks.classList.remove("open");
+
+            menuBtn.textContent = "☰";
+
+          }
+        );
 
       });
-
-    });
 
 
     /* =======================================================
        HEADER SCROLL
     ======================================================== */
 
-    const header = document.getElementById("header");
+    const header =
+      document.getElementById("header");
 
-    window.addEventListener("scroll", () => {
 
-      if (window.scrollY > 40) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 40) {
+
+          header.classList.add("scrolled");
+
+        } else {
+
+          header.classList.remove("scrolled");
+
+        }
+
       }
-
-    });
+    );
 
 
     /* =======================================================
        ACTIVE NAVIGATION
     ======================================================== */
 
-    const sections = document.querySelectorAll("section[id]");
-    const navItems = document.querySelectorAll(".nav-link");
+    const sections =
+      document.querySelectorAll(
+        "section[id]"
+      );
 
-    const activeSection = () => {
+    const navItems =
+      document.querySelectorAll(
+        ".nav-link"
+      );
+
+
+    function activeSection() {
 
       let current = "";
 
+
       sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 160;
+        const sectionTop =
+          section.offsetTop - 160;
 
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id");
+
+        if (
+          window.scrollY >= sectionTop
+        ) {
+
+          current =
+            section.getAttribute("id");
+
         }
 
       });
+
 
       navItems.forEach(link => {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+
+        if (
+          link.getAttribute("href") ===
+          "#" + current
+        ) {
+
           link.classList.add("active");
+
         }
 
       });
 
-    };
+    }
 
-    window.addEventListener("scroll", activeSection);
+
+    window.addEventListener(
+      "scroll",
+      activeSection
+    );
 
 
     /* =======================================================
@@ -2580,17 +3575,24 @@
     const revealElements =
       document.querySelectorAll(".reveal");
 
+
     const revealObserver =
       new IntersectionObserver(
         (entries, observer) => {
 
           entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
+            if (
+              entry.isIntersecting
+            ) {
 
-              entry.target.classList.add("visible");
+              entry.target.classList.add(
+                "visible"
+              );
 
-              observer.unobserve(entry.target);
+              observer.unobserve(
+                entry.target
+              );
 
             }
 
@@ -2615,73 +3617,112 @@
     ======================================================== */
 
     const filterButtons =
-      document.querySelectorAll(".filter-btn");
+      document.querySelectorAll(
+        ".filter-btn"
+      );
 
     const projects =
-      document.querySelectorAll(".project");
+      document.querySelectorAll(
+        ".project"
+      );
 
 
     filterButtons.forEach(button => {
 
-      button.addEventListener("click", () => {
+      button.addEventListener(
+        "click",
+        () => {
 
-        const filter =
-          button.getAttribute("data-filter");
-
-        filterButtons.forEach(btn => {
-          btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
+          const filter =
+            button.getAttribute(
+              "data-filter"
+            );
 
 
-        projects.forEach(project => {
+          filterButtons.forEach(btn => {
 
-          const category =
-            project.getAttribute("data-category");
+            btn.classList.remove(
+              "active"
+            );
 
-          if (
-            filter === "all" ||
-            category === filter
-          ) {
+          });
 
-            project.style.display = "block";
 
-            setTimeout(() => {
-              project.style.opacity = "1";
-              project.style.transform = "translateY(0)";
-            }, 20);
+          button.classList.add(
+            "active"
+          );
 
-          } else {
 
-            project.style.opacity = "0";
-            project.style.transform = "translateY(15px)";
+          projects.forEach(project => {
 
-            setTimeout(() => {
-              project.style.display = "none";
-            }, 250);
+            const category =
+              project.getAttribute(
+                "data-category"
+              );
 
-          }
 
-        });
+            if (
+              filter === "all" ||
+              category === filter
+            ) {
 
-      });
+              project.style.display =
+                "block";
+
+              setTimeout(() => {
+
+                project.style.opacity =
+                  "1";
+
+                project.style.transform =
+                  "translateY(0)";
+
+              }, 20);
+
+            } else {
+
+              project.style.opacity =
+                "0";
+
+              project.style.transform =
+                "translateY(15px)";
+
+
+              setTimeout(() => {
+
+                project.style.display =
+                  "none";
+
+              }, 250);
+
+            }
+
+          });
+
+        }
+      );
 
     });
 
 
     /* =======================================================
-       TESTIMONIAL DRAG / WHEEL
+       TESTIMONIAL HORIZONTAL SCROLL
     ======================================================== */
 
     const testimonialTrack =
-      document.querySelector(".testimonial-track");
+      document.querySelector(
+        ".testimonial-track"
+      );
+
 
     testimonialTrack.addEventListener(
       "wheel",
       event => {
 
-        if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+        if (
+          Math.abs(event.deltaY) >
+          Math.abs(event.deltaX)
+        ) {
 
           event.preventDefault();
 
@@ -2691,7 +3732,9 @@
         }
 
       },
-      { passive: false }
+      {
+        passive: false
+      }
     );
 
 
@@ -2699,35 +3742,50 @@
        CURRENT YEAR
     ======================================================== */
 
-    document.getElementById("year").textContent =
+    document.getElementById("year")
+      .textContent =
       new Date().getFullYear();
 
 
     /* =======================================================
-       SMOOTH CTA FEEDBACK
+       SMOOTH ANCHOR SCROLL
     ======================================================== */
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document
+      .querySelectorAll(
+        'a[href^="#"]'
+      )
+      .forEach(anchor => {
 
-      anchor.addEventListener("click", function(event) {
+        anchor.addEventListener(
+          "click",
+          function(event) {
 
-        const target =
-          document.querySelector(this.getAttribute("href"));
+            const target =
+              document.querySelector(
+                this.getAttribute("href")
+              );
 
-        if (!target) return;
 
-        event.preventDefault();
+            if (!target) return;
 
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+
+            event.preventDefault();
+
+
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+          }
+        );
 
       });
 
-    });
 
   </script>
 
 </body>
 </html>
+```
