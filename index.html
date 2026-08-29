@@ -101,6 +101,7 @@
 
       --accent: #d8ff3e;
       --accent-dark: #a9c923;
+      --glow: #d8ff3e;
 
       --container: 1180px;
 
@@ -118,6 +119,8 @@
       width: min(var(--container), calc(100% - 40px));
       margin: auto;
     }
+    
+
 
     section {
       position: relative;
@@ -215,7 +218,7 @@
 
       border-radius: 50%;
 
-      background: rgba(216,255,62,.04);
+      background: rgba(216,255,62,0.12);
 
       filter: blur(100px);
 
@@ -734,6 +737,13 @@
 
       font-size: 21px;
     }
+
+    .service-icon svg {
+      width: 25px;
+      height: 25px;
+
+      color: #d8ff3e;
+}
 
     .service-card h3 {
       font-family: "Space Grotesk", sans-serif;
@@ -2195,7 +2205,7 @@
 
           <p class="hero-copy">
             I design clear, modern and user-focused interfaces
-            for websites, mobile apps and digital products —
+            for websites, mobile apps and digital products 
             turning complex ideas into simple experiences.
           </p>
 
@@ -2326,13 +2336,53 @@
 
           <article class="service-card reveal">
 
-            <span class="service-number">
+            <!-- <span class="service-number">
               01
-            </span>
+            </span> -->
 
             <div class="service-icon">
-              ⌁
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                />
+
+                <path
+                  d="M3 12H21"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M12 3C14.5 5.5 15.7 8.5 15.7 12C15.7 15.5 14.5 18.5 12 21"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M12 3C9.5 5.5 8.3 8.5 8.3 12C8.3 15.5 9.5 18.5 12 21"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+              </svg>
             </div>
+
+            <!-- <div class="service-icon">
+              🌐
+            </div> -->
 
             <h3>
               Website Design
@@ -2348,13 +2398,48 @@
 
           <article class="service-card reveal">
 
-            <span class="service-number">
+            <!-- <span class="service-number">
               02
-            </span>
+            </span> -->
+
 
             <div class="service-icon">
-              ▣
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <rect
+                  x="6.5"
+                  y="2.5"
+                  width="11"
+                  height="19"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                />
+
+                <path
+                  d="M10 5H14"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+
+                <circle
+                  cx="12"
+                  cy="18.5"
+                  r="1"
+                  fill="currentColor"
+                />
+              </svg>
             </div>
+            <!-- <div class="service-icon">
+              ▣
+            </div> -->
 
             <h3>
               Mobile App Design
@@ -2370,9 +2455,9 @@
 
           <article class="service-card reveal">
 
-            <span class="service-number">
+            <!-- <span class="service-number">
               03
-            </span>
+            </span> -->
 
             <div class="service-icon">
               ◫
@@ -2392,9 +2477,9 @@
 
           <article class="service-card reveal">
 
-            <span class="service-number">
+            <!-- <span class="service-number">
               04
-            </span>
+            </span> -->
 
             <div class="service-icon">
               ⌘
@@ -2433,9 +2518,12 @@
 
         <div class="reveal">
 
-          <span class="about-label">
-            About the designer
-          </span>
+          <!-- <span class="about-label">
+            About Me
+          </span> -->
+          <div class="eyebrow">
+            About Me
+          </div>
 
         </div>
 
@@ -2451,17 +2539,19 @@
 
 
           <p class="about-text">
-            I'm a UI/UX designer based in Dhaka, Bangladesh,
+            I'm Miraz, A UI UX designer with 2+ years of experience in Mobile, Web, Landing page design and more.
+            <!-- I'm a UI/UX designer based in Dhaka, Bangladesh,
             focused on creating digital experiences that
-            balance visual quality with usability.
+            balance visual quality with usability. -->
           </p>
 
 
           <p class="about-text">
-            My approach starts with understanding the user
+            I use Figma to create clean, user-friendly designs that combine style and function. Let’s bring your ideas to life!
+            <!-- My approach starts with understanding the user
             and the business goal. From there, I turn ideas
             into structured interfaces, thoughtful interactions
-            and polished visual systems.
+            and polished visual systems. -->
           </p>
 
 
