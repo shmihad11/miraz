@@ -1638,7 +1638,7 @@
       margin-top: 35px;
     }
 
-    .contact-details {
+    /* .contact-details {
       display: grid;
 
       grid-template-columns:
@@ -1688,7 +1688,165 @@
 
     .contact-detail span {
       font-size: 14px;
-    }
+    } */
+
+
+    .contact-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 35px;
+}
+
+
+.contact-detail {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  min-height: 82px;
+
+  padding: 17px 18px;
+
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  color: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.contact-detail:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(216, 255, 62, 0.35);
+
+  background: rgba(216, 255, 62, 0.035);
+}
+
+
+/* Icon */
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(216, 255, 62, 0.08);
+
+  color: #d8ff3e;
+}
+
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+
+  display: block;
+}
+
+
+/* Text */
+
+.contact-detail-text {
+  min-width: 0;
+  padding-right: 20px;
+}
+
+
+.contact-detail-text small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #777e7e;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+
+.contact-detail-text strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* Arrow */
+
+.contact-arrow {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  color: #656b6b;
+
+  font-size: 17px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.contact-detail:hover .contact-arrow {
+  color: #d8ff3e;
+
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+
+  .contact-detail {
+    min-height: 76px;
+  }
+
+}
 
 
     /* =========================================================
@@ -2246,8 +2404,10 @@
             </a>
 
             <a
-              href="#contact"
+              href="https://drive.google.com/file/d/1MHtnThi4YBLfXBvlxrtuqLc_9qtwfzE2/view?usp=sharing"
               class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               View Resume
             </a>
@@ -3495,6 +3655,272 @@
 
           <div class="contact-details">
 
+  <!-- Gmail -->
+  <a
+    href="mailto:hmdmiraz305@gmail.com"
+    class="contact-detail"
+  >
+    <div class="contact-icon gmail-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 6.5L12 13L21 6.5"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="14"
+          rx="2"
+          stroke="currentColor"
+          stroke-width="1.7"
+        />
+      </svg>
+    </div>
+
+    <div class="contact-detail-text">
+      <small>Email</small>
+      <strong>hmdmiraz305@gmail.com</strong>
+    </div>
+
+    <span class="contact-arrow">↗</span>
+  </a>
+
+
+  <!-- WhatsApp -->
+  <a
+    href="https://wa.me/8801985273633"
+    class="contact-detail"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="contact-icon">
+      <img
+        src="whatsapp 1.png"
+        alt="WhatsApp"
+      >
+      <!-- <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M20 11.5C20 16.2 16.2 20 11.5 20C10 20 8.6 19.6 7.4 18.9L4 20L5.1 16.8C4.4 15.6 4 14.1 4 12.5C4 7.8 7.8 4 12.5 4C17.2 4 20 6.8 20 11.5Z"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8.5 9.5C8.8 12 10.5 14 13 15"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </svg> -->
+    </div>
+
+    <div class="contact-detail-text">
+      <small>WhatsApp</small>
+      <strong>01985273633</strong>
+    </div>
+
+    <span class="contact-arrow">↗</span>
+  </a>
+
+
+  <!-- LinkedIn -->
+  <a
+    href="https://www.linkedin.com/in/miraz01/"
+    class="contact-detail"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <rect
+          x="4"
+          y="4"
+          width="16"
+          height="16"
+          rx="2"
+          stroke="currentColor"
+          stroke-width="1.7"
+        />
+        <path
+          d="M8 10V16"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+        <path
+          d="M8 8V8.01"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <path
+          d="M12 16V10"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+        <path
+          d="M12 13C12 11.3 13 10 14.5 10C16 10 17 11.1 17 13V16"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+
+    <div class="contact-detail-text">
+      <small>LinkedIn</small>
+      <strong>Connect with me</strong>
+    </div>
+
+    <span class="contact-arrow">↗</span>
+  </a>
+
+
+  <!-- Dribbble -->
+  <a
+    href="https://dribbble.com/Mirazhossain12"
+    class="contact-detail"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          stroke="currentColor"
+          stroke-width="1.7"
+        />
+        <path
+          d="M6 7.5C10 10 14.5 10.5 18.5 9"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M8 18C10 14.5 14 12.5 19 13"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+
+    <div class="contact-detail-text">
+      <small>Dribbble</small>
+      <strong>View my shots</strong>
+    </div>
+
+    <span class="contact-arrow">↗</span>
+  </a>
+
+
+  <!-- Behance -->
+  <a
+    href="https://www.behance.net/Miraz012"
+    class="contact-detail"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M5 6H11C13 6 14.5 7.1 14.5 8.8C14.5 10.1 13.7 11 12.5 11.4C14.1 11.7 15 12.8 15 14.2C15 16.5 13.3 18 11 18H5V6Z"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8 8.5H10.5C11.3 8.5 11.8 8.9 11.8 9.5C11.8 10.2 11.3 10.5 10.5 10.5H8"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <path
+          d="M8 13H10.8C11.7 13 12.2 13.5 12.2 14.2C12.2 15 11.7 15.5 10.8 15.5H8"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <path
+          d="M17 9H21"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M16 13H21C21 10.5 19.9 9 18.5 9C16.8 9 16 10.5 16 13Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+
+    <div class="contact-detail-text">
+      <small>Behance</small>
+      <strong>View my projects</strong>
+    </div>
+
+    <span class="contact-arrow">↗</span>
+  </a>
+
+
+  <!-- Microsoft Teams -->
+  <a
+    href="YOUR_TEAMS_URL"
+    class="contact-detail"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <rect
+          x="4"
+          y="6"
+          width="13"
+          height="12"
+          rx="2"
+          stroke="currentColor"
+          stroke-width="1.7"
+        />
+        <path
+          d="M8 10H13"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+        <path
+          d="M10.5 10V15"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+        <circle
+          cx="17.5"
+          cy="7"
+          r="2"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+
+    <div class="contact-detail-text">
+      <small>Teams</small>
+      <strong>Available for projects</strong>
+    </div>
+
+    <span class="contact-arrow">↗</span>
+  </a>
+
+</div>
+          <!-- <div class="contact-details">
+
 
             <div class="contact-detail">
 
@@ -3514,11 +3940,11 @@
             <div class="contact-detail">
 
               <small>
-                Phone
+                Whatsapp
               </small>
 
               <a
-                href="tel:01985273633"
+                href="https://wa.me/+8801985273633"
               >
                 01985273633
               </a>
@@ -3529,7 +3955,7 @@
             <div class="contact-detail">
 
               <small>
-                Location
+                linkedin
               </small>
 
               <span>
@@ -3542,7 +3968,7 @@
             <div class="contact-detail">
 
               <small>
-                Open to
+                Teams
               </small>
 
               <span>
@@ -3552,7 +3978,7 @@
             </div>
 
 
-          </div>
+          </div> -->
 
         </div>
 
