@@ -900,181 +900,31 @@
       border-color: var(--accent);
     }
 
-   /* =========================================
-   PROJECT SHOWCASE
-========================================= */
+    .projects-grid {
+      display: grid;
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+      grid-template-columns: repeat(12, 1fr);
 
-  margin-top: 55px;
-}
+      gap: 16px;
 
+      margin-top: 60px;
+    }
 
-/* Project card */
+    .project {
+      position: relative;
 
-.project {
-  position: relative;
+      min-height: 470px;
 
-  width: 100%;
+      border-radius: 28px;
 
-  overflow: hidden;
+      overflow: hidden;
 
-  border-radius: 18px;
+      background: var(--bg-card);
 
-  background: transparent;
+      border: 1px solid var(--border);
 
-  border: none;
-}
-
-
-/* Image container */
-
-.project-visual {
-  width: 100%;
-  height: 420px;
-
-  overflow: hidden;
-
-  border-radius: 18px;
-
-  background: #151818;
-}
-
-
-/* Actual project image */
-
-.project-visual img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-  object-position: center;
-
-  border-radius: 18px;
-}
-
-
-/* =========================================
-   FILTERS
-========================================= */
-
-.project-filters {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  flex-wrap: wrap;
-}
-
-
-.filter-btn {
-  padding: 10px 18px;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  border-radius: 100px;
-
-  background: transparent;
-
-  color: #858b8b;
-
-  font-family: inherit;
-  font-size: 13px;
-
-  cursor: pointer;
-
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
-}
-
-
-.filter-btn:hover {
-  color: #ffffff;
-
-  border-color: rgba(216, 255, 62, 0.3);
-}
-
-
-.filter-btn.active {
-  background: #d8ff3e;
-
-  border-color: #d8ff3e;
-
-  color: #101212;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-visual {
-    height: 450px;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-
-    margin-top: 35px;
-  }
-
-  .project-visual {
-    height: 300px;
-
-    border-radius: 14px;
-  }
-
-  .project-visual img {
-    border-radius: 14px;
-  }
-
-  .project-filters {
-    margin-top: 25px;
-
-    width: 100%;
-
-    overflow-x: auto;
-
-    flex-wrap: nowrap;
-
-    padding-bottom: 5px;
-
-    scrollbar-width: none;
-  }
-
-  .project-filters::-webkit-scrollbar {
-    display: none;
-  }
-
-  .filter-btn {
-    flex-shrink: 0;
-  }
-
-}
+      transition: var(--transition);
+    }
 
     .project:hover {
       transform: translateY(-6px);
@@ -2939,150 +2789,399 @@
     </section>
 
 
-   <!-- =========================
-     SELECTED WORK
-========================= -->
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
 
-<section class="projects" id="projects">
+    <section
+      class="projects"
+      id="projects"
+    >
 
-  <div class="container">
+      <div class="container">
 
-    <div class="projects-head reveal">
 
-      <div>
-        <div class="eyebrow">
-          Selected Work
+        <div class="projects-head reveal">
+
+
+          <div>
+
+            <div class="eyebrow">
+              Selected Work
+            </div>
+
+            <h2 class="section-title">
+              A selection of
+              <span class="accent">
+                recent work.
+              </span>
+            </h2>
+
+          </div>
+
+
+          <div class="project-filters">
+
+            <button
+              class="filter-btn active"
+              data-filter="all"
+            >
+              All
+            </button>
+
+            <button
+              class="filter-btn"
+              data-filter="web"
+            >
+              Web
+            </button>
+
+            <button
+              class="filter-btn"
+              data-filter="mobile"
+            >
+              Mobile
+            </button>
+
+            <button
+              class="filter-btn"
+              data-filter="dashboard"
+            >
+              Dashboard
+            </button>
+
+          </div>
+
+
         </div>
 
-        <h2 class="section-title">
-          A selection of
-          <span class="accent">
-            recent work.
-          </span>
-        </h2>
+
+        <div class="projects-grid">
+
+
+          <!-- Project 1 -->
+
+          <article
+            class="project reveal"
+            data-category="web"
+          >
+            
+            <!-- <div class="project-visual">
+
+              <div class="mockup-browser">
+
+                <div class="browser-top">
+
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+
+                </div>
+
+
+                <div class="mockup-content">
+
+                  <div class="mini-label"></div>
+
+                  <h4>
+                    Build a stronger
+                    digital presence.
+                  </h4>
+
+                  <p></p>
+                  <p></p>
+
+                  <div class="mockup-button"></div>
+
+                </div>
+
+              </div>
+
+            </div> -->
+            
+             <!-- project showing -->
+            <div class="project-visual">
+
+              <img
+                src="website-design1.png"
+                alt="Website UI UX Design Project"
+              >
+            
+            </div>
+            <!-- project showing -->
+            <div class="project-overlay"></div>
+
+
+            <div class="project-info">
+
+              <!-- <span class="project-category">
+                Website Design
+              </span>
+
+              <h3>
+                Business Landing Page
+              </h3>
+
+              <p>
+                Conversion-focused web experience
+                with a clean visual system.
+              </p> -->
+
+            </div>
+
+          </article>
+
+
+          <!-- Project 2 -->
+
+          <article
+            class="project reveal"
+            data-category="mobile"
+          >
+
+            <!-- <div class="project-visual">
+
+              <div class="mobile-mockup">
+
+                <div class="mobile-notch"></div>
+
+                <div class="mobile-screen">
+
+                  <div class="mobile-header"></div>
+
+                  <div class="mobile-block"></div>
+
+                  <div class="mobile-line"></div>
+
+                  <div class="mobile-line"></div>
+
+                  <div
+                    class="mobile-block"
+                    style="height:70px;"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div> -->
+
+            
+             <!-- project showing -->
+            <div class="project-visual">
+
+              <img
+                src="app-design1.png"
+                alt="Website UI UX Design Project"
+              >
+            
+            </div>
+            <!-- project showing -->
+
+            <div class="project-overlay"></div>
+
+
+            <!-- <div class="project-info">
+
+              <span class="project-category">
+                Mobile App
+              </span>
+
+              <h3>
+                Mobile Product Concept
+              </h3>
+
+              <p>
+                Simple navigation and task-focused
+                mobile experience.
+              </p>
+
+            </div> -->
+
+          </article>
+
+
+          <!-- Project 3 -->
+
+          <article
+            class="project reveal"
+            data-category="dashboard"
+          >
+
+            <!-- <div class="project-visual">
+
+              <div class="dashboard">
+
+                <div class="dash-side">
+
+                  <div
+                    class="dash-side-line"
+                    style="background:#d8ff3e;"
+                  ></div>
+
+                  <div class="dash-side-line"></div>
+
+                  <div class="dash-side-line"></div>
+
+                  <div class="dash-side-line"></div>
+
+                  <div class="dash-side-line"></div>
+
+                </div>
+
+
+                <div class="dash-main">
+
+                  <div class="dash-heading"></div>
+
+
+                  <div class="dash-cards">
+
+                    <div class="dash-card"></div>
+
+                    <div class="dash-card"></div>
+
+                    <div class="dash-card"></div>
+
+                  </div>
+
+
+                  <div class="chart"></div>
+
+                </div>
+
+              </div>
+
+            </div> -->
+            
+             <!-- project showing -->
+            <div class="project-visual">
+
+              <img
+                src="Dashboard.png"
+                alt="Website UI UX Design Project"
+              >
+            
+            </div>
+            <!-- project showing -->
+            
+            <div class="project-overlay"></div>
+
+
+            <div class="project-info">
+
+              <span class="project-category">
+                Dashboard
+              </span>
+
+              <h3>
+                Analytics Dashboard
+              </h3>
+
+              <p>
+                Information architecture designed
+                for faster decision-making.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Project 4 -->
+
+          <article
+            class="project reveal"
+            data-category="web"
+          >
+<!-- 
+            <div class="project-visual">
+
+              <div
+                class="mockup-browser"
+                style="
+                  width:82%;
+                  height:58%;
+                  transform:rotate(3deg);
+                "
+              >
+
+                <div class="browser-top">
+
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+
+                </div>
+
+
+                <div class="mockup-content">
+
+                  <div
+                    class="mini-label"
+                    style="background:#252828;"
+                  ></div>
+
+                  <h4>
+                    A better experience
+                    starts with clarity.
+                  </h4>
+
+                  <p></p>
+                  <p></p>
+                  <p style="width:50%;"></p>
+
+                  <div
+                    class="mockup-button"
+                    style="background:#d8ff3e;"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div> -->
+
+            
+             <!-- project showing -->
+            <div class="project-visual">
+
+              <img
+                src="website-design2.png"
+                alt="Website UI UX Design Project"
+              >
+            
+            </div>
+            <!-- project showing -->
+
+            <div class="project-overlay"></div>
+
+
+            <div class="project-info">
+
+              <span class="project-category">
+                Responsive Design
+              </span>
+
+              <h3>
+                Modern Product Website
+              </h3>
+
+              <p>
+                Responsive interface system designed
+                across multiple screen sizes.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
       </div>
 
-
-      <!-- Filters -->
-      <div class="project-filters">
-
-        <button
-          class="filter-btn active"
-          data-filter="all"
-        >
-          All
-        </button>
-
-        <button
-          class="filter-btn"
-          data-filter="web"
-        >
-          Web
-        </button>
-
-        <button
-          class="filter-btn"
-          data-filter="mobile"
-        >
-          Mobile
-        </button>
-
-        <button
-          class="filter-btn"
-          data-filter="dashboard"
-        >
-          Dashboard
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         PROJECT GRID
-    ========================= -->
-
-    <div class="projects-grid">
-
-
-      <!-- Project 1 -->
-      <article
-        class="project reveal"
-        data-category="web"
-      >
-
-        <div class="project-visual">
-
-          <img
-            src="website-design1.png"
-            alt="Website UI UX Design Project"
-          >
-
-        </div>
-
-      </article>
-
-
-      <!-- Project 2 -->
-      <article
-        class="project reveal"
-        data-category="mobile"
-      >
-
-        <div class="project-visual">
-
-          <img
-            src="app-design1.png"
-            alt="Mobile App UI UX Design Project"
-          >
-
-        </div>
-
-      </article>
-
-
-      <!-- Project 3 -->
-      <article
-        class="project reveal"
-        data-category="dashboard"
-      >
-
-        <div class="project-visual">
-
-          <img
-            src="Dashboard.png"
-            alt="Dashboard UI UX Design Project"
-          >
-
-        </div>
-
-      </article>
-
-
-      <!-- Project 4 -->
-      <article
-        class="project reveal"
-        data-category="web"
-      >
-
-        <div class="project-visual">
-
-          <img
-            src="website-design2.png"
-            alt="Responsive Website UI UX Design Project"
-          >
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
     <!-- =====================================================
