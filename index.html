@@ -901,102 +901,82 @@
     }
 
     .projects-grid {
-      display: grid;
+  width: 100%;
 
-      grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  flex-wrap: wrap;
 
-      gap: 16px;
+  gap: 24px;
 
-      margin-top: 60px;
-    }
-
-    .project {
-      position: relative;
-
-      min-height: 470px;
-
-      border-radius: 28px;
-
-      overflow: hidden;
-
-      background: var(--bg-card);
-
-      border: 1px solid var(--border);
-
-      transition: var(--transition);
-    }
-
-    .project:hover {
-      transform: translateY(-6px);
-
-      border-color:
-        rgba(216,255,62,.25);
-    }
-
-    .project:nth-child(1),
-    .project:nth-child(4) {
-      grid-column: span 7;
-    }
-
-    .project:nth-child(2),
-    .project:nth-child(3) {
-      grid-column: span 5;
-    }
-
-    .project:nth-child(4) {
-      min-height: 390px;
-    }
-
-    /* .project-visual {
-      position: absolute;
-
-      inset: 0;
-
-      overflow: hidden;
-
-      background: #16191a;
-    } */
-
-    /* project showing */
-    .project-visual {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  background: #16191a;
+  margin-top: 60px;
 }
+
+
+.project {
+  width: calc(50% - 12px);
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #151818;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.project-visual {
+  width: 100%;
+  height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
 
 .project-visual img {
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
-  object-position: center;
-
   display: block;
 
-  transition: transform 0.5s ease;
+  object-fit: cover;
+
+  /* NO HOVER EFFECT */
+  transform: none;
+  transition: none;
 }
 
-.project:hover .project-visual img {
-  transform: scale(1.04);
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 40px;
+  }
+
+
+  .project {
+    width: 100%;
+  }
+
+
+  .project-visual {
+    height: 320px;
+  }
+
 }
-    /* project showing */
-    
-    .project-overlay {
-      position: absolute;
-
-      inset: 0;
-
-      background:
-        linear-gradient(
-          to top,
-          rgba(8,9,10,.98) 0%,
-          rgba(8,9,10,.1) 65%
-        );
-
-      z-index: 2;
-    }
-
 
     /* =========================================================
        PROJECT MOCKUPS
@@ -2858,326 +2838,62 @@
 
         <div class="projects-grid">
 
-
-          <!-- Project 1 -->
-
-          <article
-            class="project reveal"
-            data-category="web"
-          >
-            
-            <!-- <div class="project-visual">
-
-              <div class="mockup-browser">
-
-                <div class="browser-top">
-
-                  <span class="browser-dot"></span>
-                  <span class="browser-dot"></span>
-                  <span class="browser-dot"></span>
-
-                </div>
-
-
-                <div class="mockup-content">
-
-                  <div class="mini-label"></div>
-
-                  <h4>
-                    Build a stronger
-                    digital presence.
-                  </h4>
-
-                  <p></p>
-                  <p></p>
-
-                  <div class="mockup-button"></div>
-
-                </div>
-
-              </div>
-
-            </div> -->
-            
-             <!-- project showing -->
-            <div class="project-visual">
-
-              <img
-                src="website-design1.png"
-                alt="Website UI UX Design Project"
-              >
-            
-            </div>
-            <!-- project showing -->
-            <div class="project-overlay"></div>
-
-
-            <div class="project-info">
-
-              <!-- <span class="project-category">
-                Website Design
-              </span>
-
-              <h3>
-                Business Landing Page
-              </h3>
-
-              <p>
-                Conversion-focused web experience
-                with a clean visual system.
-              </p> -->
-
-            </div>
-
-          </article>
-
-
-          <!-- Project 2 -->
-
-          <article
-            class="project reveal"
-            data-category="mobile"
-          >
-
-            <!-- <div class="project-visual">
-
-              <div class="mobile-mockup">
-
-                <div class="mobile-notch"></div>
-
-                <div class="mobile-screen">
-
-                  <div class="mobile-header"></div>
-
-                  <div class="mobile-block"></div>
-
-                  <div class="mobile-line"></div>
-
-                  <div class="mobile-line"></div>
-
-                  <div
-                    class="mobile-block"
-                    style="height:70px;"
-                  ></div>
-
-                </div>
-
-              </div>
-
-            </div> -->
-
-            
-             <!-- project showing -->
-            <div class="project-visual">
-
-              <img
-                src="app-design1.png"
-                alt="Website UI UX Design Project"
-              >
-            
-            </div>
-            <!-- project showing -->
-
-            <div class="project-overlay"></div>
-
-
-            <!-- <div class="project-info">
-
-              <span class="project-category">
-                Mobile App
-              </span>
-
-              <h3>
-                Mobile Product Concept
-              </h3>
-
-              <p>
-                Simple navigation and task-focused
-                mobile experience.
-              </p>
-
-            </div> -->
-
-          </article>
-
-
-          <!-- Project 3 -->
-
-          <article
-            class="project reveal"
-            data-category="dashboard"
-          >
-
-            <!-- <div class="project-visual">
-
-              <div class="dashboard">
-
-                <div class="dash-side">
-
-                  <div
-                    class="dash-side-line"
-                    style="background:#d8ff3e;"
-                  ></div>
-
-                  <div class="dash-side-line"></div>
-
-                  <div class="dash-side-line"></div>
-
-                  <div class="dash-side-line"></div>
-
-                  <div class="dash-side-line"></div>
-
-                </div>
-
-
-                <div class="dash-main">
-
-                  <div class="dash-heading"></div>
-
-
-                  <div class="dash-cards">
-
-                    <div class="dash-card"></div>
-
-                    <div class="dash-card"></div>
-
-                    <div class="dash-card"></div>
-
-                  </div>
-
-
-                  <div class="chart"></div>
-
-                </div>
-
-              </div>
-
-            </div> -->
-            
-             <!-- project showing -->
-            <div class="project-visual">
-
-              <img
-                src="Dashboard.png"
-                alt="Website UI UX Design Project"
-              >
-            
-            </div>
-            <!-- project showing -->
-            
-            <div class="project-overlay"></div>
-
-
-            <div class="project-info">
-
-              <span class="project-category">
-                Dashboard
-              </span>
-
-              <h3>
-                Analytics Dashboard
-              </h3>
-
-              <p>
-                Information architecture designed
-                for faster decision-making.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <!-- Project 4 -->
-
-          <article
-            class="project reveal"
-            data-category="web"
-          >
-<!-- 
-            <div class="project-visual">
-
-              <div
-                class="mockup-browser"
-                style="
-                  width:82%;
-                  height:58%;
-                  transform:rotate(3deg);
-                "
-              >
-
-                <div class="browser-top">
-
-                  <span class="browser-dot"></span>
-                  <span class="browser-dot"></span>
-                  <span class="browser-dot"></span>
-
-                </div>
-
-
-                <div class="mockup-content">
-
-                  <div
-                    class="mini-label"
-                    style="background:#252828;"
-                  ></div>
-
-                  <h4>
-                    A better experience
-                    starts with clarity.
-                  </h4>
-
-                  <p></p>
-                  <p></p>
-                  <p style="width:50%;"></p>
-
-                  <div
-                    class="mockup-button"
-                    style="background:#d8ff3e;"
-                  ></div>
-
-                </div>
-
-              </div>
-
-            </div> -->
-
-            
-             <!-- project showing -->
-            <div class="project-visual">
-
-              <img
-                src="website-design2.png"
-                alt="Website UI UX Design Project"
-              >
-            
-            </div>
-            <!-- project showing -->
-
-            <div class="project-overlay"></div>
-
-
-            <div class="project-info">
-
-              <span class="project-category">
-                Responsive Design
-              </span>
-
-              <h3>
-                Modern Product Website
-              </h3>
-
-              <p>
-                Responsive interface system designed
-                across multiple screen sizes.
-              </p>
-
-            </div>
-
-          </article>
-
-
-        </div>
+  <!-- Project 1 -->
+  <article
+    class="project reveal"
+    data-category="web"
+  >
+    <div class="project-visual">
+      <img
+        src="website-design1.png"
+        alt="Website UI UX Design Project"
+      >
+    </div>
+  </article>
+
+
+  <!-- Project 2 -->
+  <article
+    class="project reveal"
+    data-category="mobile"
+  >
+    <div class="project-visual">
+      <img
+        src="app-design1.png"
+        alt="Mobile App UI UX Design Project"
+      >
+    </div>
+  </article>
+
+
+  <!-- Project 3 -->
+  <article
+    class="project reveal"
+    data-category="dashboard"
+  >
+    <div class="project-visual">
+      <img
+        src="Dashboard.png"
+        alt="Dashboard UI UX Design Project"
+      >
+    </div>
+  </article>
+
+
+  <!-- Project 4 -->
+  <article
+    class="project reveal"
+    data-category="web"
+  >
+    <div class="project-visual">
+      <img
+        src="website-design2.png"
+        alt="Responsive Website UI UX Design Project"
+      >
+    </div>
+  </article>
+
+</div>
 
       </div>
 
